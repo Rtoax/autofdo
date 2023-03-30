@@ -203,7 +203,7 @@ function (config_with_llvm)
     add_definitions(-DLLVM_GETELFFILE_RET_REFERENCE=${LLVM_GETELFFILE_RET_REFERENCE})
   endif()
 
-  set (CMAKE_REQUIRED_LIBRARIES LLVMProfileData)
+  set (CMAKE_REQUIRED_LIBRARIES LLVM LLVMProfileData)
   check_cxx_source_compiles(
     "
     #include \"llvm/ProfileData/SampleProfWriter.h\"
